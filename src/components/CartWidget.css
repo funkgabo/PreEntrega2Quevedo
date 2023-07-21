@@ -1,0 +1,11 @@
+.CardWidget-container {
+    position: relative;
+    width:30px;
+}
+.cartCount-value{
+    position: absolute;
+    bottom:-10px;
+    left: 1px;
+    color: beige;
+    font-size: 18px;
+}
