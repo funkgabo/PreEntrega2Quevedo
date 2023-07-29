@@ -3,9 +3,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import DorianLogo from '../assets/DS.svg'
+import DorianLogo from '../../assets/DS.svg'
 import Container from 'react-bootstrap/Container';
-import { CartWidget } from './CartWidget';
+import { CartWidget } from '../CartWidget';
 
 
 export const NavBar = () => {
