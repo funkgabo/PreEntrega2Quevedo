@@ -1,4 +1,8 @@
-main {
+.main {
     min-height: calc(100vh - 66px);
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+}
+.title {
+    margin: 40px 0;
 }

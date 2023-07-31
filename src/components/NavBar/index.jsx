@@ -19,10 +19,10 @@ export const NavBar = () => {
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto justify-content-around flex-grow-1">
                                 <Nav.Link href="#home">Camisas</Nav.Link>
-                                <Nav.Link href="#link">Poleras</Nav.Link>
-                                <Nav.Link href="#link">Bluzas</Nav.Link>
-                                <Nav.Link href="#link">Carteras</Nav.Link>
-                                <Nav.Link href="#link">Zapatos</Nav.Link>
+                                <Nav.Link href="#link1">Poleras</Nav.Link>
+                                <Nav.Link href="#link2">Bluzas</Nav.Link>
+                                <Nav.Link href="#link3">Carteras</Nav.Link>
+                                <Nav.Link href="#link4">Zapatos</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Col>
