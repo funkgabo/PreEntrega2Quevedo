@@ -64,26 +64,6 @@ export const SkeletonItem = () => {
                 <Skeleton count={1} circle={true} width={35} height={35} />
                 <Skeleton count={4} />
             </div>
-            <div>
-                <Skeleton count={1} circle={true} width={35} height={35} />
-                <Skeleton count={4} />
-            </div>
-            <div>
-                <Skeleton count={1} circle={true} width={35} height={35} />
-                <Skeleton count={4} />
-            </div>
-            <div>
-                <Skeleton count={1} circle={true} width={35} height={35} />
-                <Skeleton count={4} />
-            </div>
-            <div>
-                <Skeleton count={1} circle={true} width={35} height={35} />
-                <Skeleton count={4} />
-            </div>
-            <div>
-                <Skeleton count={1} circle={true} width={35} height={35} />
-                <Skeleton count={4} />
-            </div>
         </>
     );
 }

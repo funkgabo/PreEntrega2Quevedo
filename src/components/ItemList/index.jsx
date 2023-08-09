@@ -1,9 +1,8 @@
 import './ItemList.css'
 
-export const ItemList = ({ children }) => {
+export const ItemList = ({ products }) => {
     return (
         <section className="il-container">
-            {children}
         </section>
     );
 }
