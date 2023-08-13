@@ -30,6 +30,11 @@ export const ItemDetailContainer = () => {
                     <Card className="text-center" style={{ width: '42rem' }}>
                         <Card.Header>{shopData.name}</Card.Header>
                         <Card.Body>
+                        <Card.Img variant="top" src={''} onError={(e) => (
+                            (e.target.src =
+                              "https://digital55.com/wp-content/uploads/2022/01/%C2%BFQue%CC%81-cualidades-debe-tener-un-desarrollador-especialista-en-React.png")
+                          )
+                          } style={{ height: 310, objectFit: 'cover' }} />
                             <Card.Title>${shopData.price}</Card.Title>
                             <Card.Text>
                                 {shopData.description}
