@@ -63,147 +63,147 @@ const data = [
         category: "Watchs"
     },
     {
-        id: 9,
+        id: 10,
         name: "Reloj Samsung",
         price: 1290,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Watchs"
     },
     {
-        id: 10,
+        id: 11,
         name: "Reloj Deportivo Genérico",
         price: 750,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Watchs"
     },
     {
-        id: 11,
+        id: 12,
         name: "Reloj Resistente al agua Sony",
         price: 1100,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Watchs"
     },
     {
-        id: 12,
+        id: 13,
         name: "Zapatillas Verdes Vans",
         price: 950,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Shoes"
     },
     {
-        id: 13,
+        id: 14,
         name: "Zapatos Cardinal",
         price: 1320,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Shoes"
     },
     {
-        id: 14,
+        id: 15,
         name: "Zapatillas Converse Negras",
         price: 1160,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Shoes"
     },
     {
-        id: 15,
+        id: 16,
         name: "Zapatillas Reebok Blancas",
         price: 960,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Shoes"
     },
     {
-        id: 16,
+        id: 17,
         name: "Zapatillas deportivas Nike",
         price: 1450,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Shoes"
     },
     {
-        id: 17,
+        id: 18,
         name: "Zapatillas Puma Azules",
         price: 1320,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Shoes"
     },
     {
-        id: 18,
+        id: 19,
         name: "Mesa de Centro",
         price: 2250,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Furniture"
     },
     {
-        id: 19,
+        id: 20,
         name: "Living Comedor de Roble",
         price: 4690,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Furniture"
     },
     {
-        id: 20,
+        id: 21,
         name: "Escritorio Blanco",
         price: 3500,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Furniture"
     },
     {
-        id: 21,
+        id: 22,
         name: "Escritorio Negro",
         price: 3500,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Furniture"
     },
     {
-        id: 22,
+        id: 23,
         name: "Sillas de Mimbre",
         price: 2250,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Furniture"
     },
     {
-        id: 23,
+        id: 24,
         name: "Adornos de Navidad",
         price: 530,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Others"
     },
     {
-        id: 24,
+        id: 25,
         name: "Luces de Neón",
         price: 520,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Others"
     },
     {
-        id: 25,
+        id: 26,
         name: "Figuras de SuperHeroes",
         price: 730,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Others"
     },
     {
-        id: 26,
+        id: 27,
         name: "Pelotas de Tennis",
         price: 1300,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Others"
     },
     {
-        id: 27,
+        id: 28,
         name: "Vasos de Cumpleaños",
         price: 160,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Others"
     },
     {
-        id: 28,
+        id: 29,
         name: "Parlantes para Computadora",
         price: 1560,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
         category: "Others"
     },
     {
-        id: 23,
+        id: 30,
         name: "Guantes para Manejar",
         price: 2800,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
