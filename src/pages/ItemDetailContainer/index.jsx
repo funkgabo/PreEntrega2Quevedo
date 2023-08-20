@@ -1,4 +1,5 @@
 import { useParams } from "react-router"
+import Form from 'react-bootstrap/Form'
 import { NavBar } from "../../components/NavBar"
 import './ItemDetailContainer.css'
 import { Card } from "react-bootstrap"
@@ -12,7 +13,28 @@ export const ItemDetailContainer = () => {
     const updateCart = useContext(CartContext)
     const params = useParams()
     const [loading, setLoading] = useState(true)
+    const [quantity, setQuantity] = useState(0)
+    const [products, setProducts] = useState([])
     const [shopData, setShopData] = useState([])
+
+    const addingCartHandler = () => {
+        setQuantity(quantity + 1)
+        setProducts([...products, [shopData.id, shopData.price, shopData.name]])
+
+    }
+    const subCartHandler = () => {
+        if (quantity > 0) {
+            setQuantity(quantity - 1)
+            const subProds = [...products]
+            subProds.pop()
+            setProducts(subProds)
+            console.log(products)
+        }
+    }
+    const pushToCart = () => {
+        console.log(updateCart.cartProducts)
+    }
+
     useEffect(() => {
         setLoading(true)
         getData()
@@ -41,8 +63,17 @@ export const ItemDetailContainer = () => {
                             <Card.Text>
                                 {shopData.description}
                             </Card.Text>
-                            <Button variant="primary" onClick={() =>{updateCart.addCartValue([shopData.id, shopData.price, shopData.name])}}>Add to Cart</Button>{' '}
-                            <Button variant="success">Buy Now</Button>
+                            <Button variant="primary" onClick={() => { updateCart.addCartValue(products) }}>Add to Cart</Button>{' '}
+                            <Button variant="secondary" onClick={subCartHandler}>-</Button>{' '}
+                            <div className='NumberFormContainer'>
+                                <Form.Label htmlFor="inputProducts">Quantity</Form.Label>
+                                <Form.Control placeholder="0"
+                                    type="number" min={1} value={quantity} onChange={() => { }}
+                                    id="inputProducts"
+                                />
+                            </div>{' '}
+                            <Button variant="secondary" onClick={addingCartHandler}>+</Button>{' '}
+                            <Button variant="success" onClick={pushToCart}>Go to Cart</Button>
                         </Card.Body>
                         <Card.Footer className="text-muted">3 Stock</Card.Footer>
                     </Card>
