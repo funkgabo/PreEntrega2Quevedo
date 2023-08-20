@@ -27,7 +27,7 @@ export const Item = ({ id, description, price, name }) => {
           <ListGroup.Item><Link to={`/Item/${id}`}>Detail</Link></ListGroup.Item>
         </ListGroup>
         <Card.Body>
-          <Button variant="primary" onClick={()=>{increaseCart.addCartValue([id, price, name])}}>Add to Cart</Button>
+          <Button variant="primary" onClick={()=>{increaseCart.addCartValue([{id, price, name}])}}>Add to Cart</Button>
         </Card.Body>
       </Card>
     </Col>

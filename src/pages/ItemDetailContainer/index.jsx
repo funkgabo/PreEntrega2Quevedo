@@ -19,16 +19,17 @@ export const ItemDetailContainer = () => {
 
     const addingCartHandler = () => {
         setQuantity(quantity + 1)
-        setProducts([...products, [shopData.id, shopData.price, shopData.name]])
+        const prod = [...products]
+        prod.push({id: shopData.id, price: shopData.price, name: shopData.name})
+        setProducts(prod)
 
     }
     const subCartHandler = () => {
-        if (quantity > 0) {
+        if (quantity > 1) {
             setQuantity(quantity - 1)
             const subProds = [...products]
             subProds.pop()
             setProducts(subProds)
-            console.log(products)
         }
     }
     const pushToCart = () => {

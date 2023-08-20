@@ -1,11 +1,12 @@
-import { NavBar } from './components/NavBar'
 import { ItemListContainer } from './components/ItemListContainer'
+import { Layout } from './components/Layout'
 
-function App() { 
+function App() {
   return (
     <>
-      <NavBar />
-      <ItemListContainer />
+      <Layout>
+        <ItemListContainer />
+      </Layout>
     </>
   )
 }

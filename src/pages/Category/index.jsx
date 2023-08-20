@@ -1,14 +1,15 @@
 import { useParams } from "react-router";
-import { NavBar } from "../../components/NavBar";
 import { ItemListContainer } from "../../components/ItemListContainer";
+import { Layout } from "../../components/Layout";
 
 
 export const Category = () => {
     const params = useParams()
     return (
         <>
-            <NavBar />
-            <ItemListContainer category={params.id} />
+            <Layout>
+                <ItemListContainer category={params.id} />
+            </Layout>
         </>
     );
 }
