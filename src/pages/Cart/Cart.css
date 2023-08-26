@@ -1,0 +1,18 @@
+.bodyCard {
+    display: flex;
+    justify-content: space-around;
+}
+.nameCart {
+    width: 20%;
+}
+.unitsModifyButton {
+    cursor: pointer;
+}
+@media only screen and (max-width: 639px) {
+    .bodyCard {
+      flex-direction: column;
+    }
+    .nameCart {
+        width: auto;
+    }
+  }

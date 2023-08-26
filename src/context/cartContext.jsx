@@ -9,6 +9,14 @@ export const CartProvider = ({ children }) => {
     const addCartValue = (product) => {
         setCartProducts(([...cartProducts, ...product]))
     }
+    const deleteCartValue = (ProductsArray, product) => {
+        const index = ProductsArray.findIndex(prod => prod.id === product.id)
+        if (index !== -1) {
+          const newArray = ProductsArray.slice();
+          newArray.splice(index, 1);
+          setCartProducts(newArray)
+        }
+      }
     useEffect(() => {
         setCartValue(cartProducts.length)
     }, [cartProducts])
@@ -17,6 +25,7 @@ export const CartProvider = ({ children }) => {
             cartValue,
             cartProducts,
             addCartValue,
+            deleteCartValue,
         }}>
             {children}
         </CartContext.Provider>
