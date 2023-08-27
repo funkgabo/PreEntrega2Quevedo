@@ -53,35 +53,35 @@ const data = [
         name: "Reloj Casio",
         price: 620,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-        category: "Watchs"
+        category: "Watches"
     },
     {
         id: 9,
         name: "Reloj Rolex",
         price: 2320,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-        category: "Watchs"
+        category: "Watches"
     },
     {
         id: 10,
         name: "Reloj Samsung",
         price: 1290,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-        category: "Watchs"
+        category: "Watches"
     },
     {
         id: 11,
         name: "Reloj Deportivo Genérico",
         price: 750,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-        category: "Watchs"
+        category: "Watches"
     },
     {
         id: 12,
         name: "Reloj Resistente al agua Sony",
         price: 1100,
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-        category: "Watchs"
+        category: "Watches"
     },
     {
         id: 13,

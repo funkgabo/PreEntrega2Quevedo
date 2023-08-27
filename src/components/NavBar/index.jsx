@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 
 export const NavBar = () => {
-    const categories = ['Furniture', 'Shoes', 'Clothes', 'Watchs', 'Others']
+    const categories = ['Furniture', 'Shoes', 'Clothes', 'Watches', 'Others']
     return (
         <Navbar sticky="top" expand="sm" bg="dark" data-bs-theme="dark" className="bg-body-tertiary">
             <Container>
