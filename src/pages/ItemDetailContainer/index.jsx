@@ -8,6 +8,8 @@ import { useContext, useEffect, useState } from "react"
 import { getData } from '../../data'
 import Skeleton from "react-loading-skeleton"
 import { CartContext } from "../../context/cartContext"
+import { collection, getDocs } from "firebase/firestore"
+import { firestore } from "../../firebase/app"
 
 export const ItemDetailContainer = () => {
     const updateCart = useContext(CartContext)
@@ -38,13 +40,23 @@ export const ItemDetailContainer = () => {
 
     useEffect(() => {
         setLoading(true)
-        getData()
-            .then(data => {
-                const findData = data.find(item => item.id === Number(params.id))
+        const fetchData = async () => {
+            try {
+                const collectionRef = collection(firestore, 'productos');
+                const snapshot = await getDocs(collectionRef)
+
+                const fetchedData = snapshot.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                const findData = fetchedData.find(item => item.id === params.id)
                 setShopData(findData)
-            })
-            .catch(error => console.log(error))
-            .finally(() => setLoading(false))
+                setLoading(false)
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+            fetchData()
     }, [])
     return (
         <>

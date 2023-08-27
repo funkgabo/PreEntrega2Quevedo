@@ -3,26 +3,35 @@ import { SkeletonItem } from '../SkeletonItem';
 import './ItemListContainer.css'
 import { ItemList } from '../ItemList';
 import { getData } from '../../data';
+import { collection, getDocs } from 'firebase/firestore';
+import { firestore } from '../../firebase/app';
 
 export const ItemListContainer = ({ category = '' }) => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
     useEffect(() => {
         setLoading(true)
-            if (category) {
-                getData()
-                    .then(data => {
-                        const filteredData = data.filter(item => item.category === category)
-                        setProducts(filteredData)
-                    })
-                    .catch(error => console.log(error))
-                    .finally(() => setLoading(false))
-            } else {
-                getData()
-                    .then(data => setProducts(data))
-                    .catch(error => console.log(error))
-                    .finally(() => setLoading(false))
+        const fetchData = async (category) => {
+            try {
+                const collectionRef = collection(firestore, 'productos');
+                const snapshot = await getDocs(collectionRef)
+
+                const fetchedData = snapshot.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                if(category){
+                    const filteredData = fetchedData.filter(item => item.category === category)
+                    setProducts(filteredData)
+                } else {
+                    setProducts(fetchedData)
+                }
+                setLoading(false)
+            } catch (error) {
+                console.error('Error fetching data:', error);
             }
+        }
+            fetchData(category)
     }, [category])
     return (
         <main className='main'>
