@@ -5,10 +5,9 @@ import './ItemDetailContainer.css'
 import { Card } from "react-bootstrap"
 import Button from 'react-bootstrap/Button'
 import { useContext, useEffect, useState } from "react"
-import { getData } from '../../data'
 import Skeleton from "react-loading-skeleton"
 import { CartContext } from "../../context/cartContext"
-import { collection, getDocs } from "firebase/firestore"
+import { collection, doc, getDoc } from "firebase/firestore"
 import { firestore } from "../../firebase/app"
 
 export const ItemDetailContainer = () => {
@@ -22,7 +21,7 @@ export const ItemDetailContainer = () => {
     const addingCartHandler = () => {
         setQuantity(quantity + 1)
         const prod = [...products]
-        prod.push({id: shopData.id, price: shopData.price, name: shopData.name})
+        prod.push({ id: shopData.id, price: shopData.price, name: shopData.name })
         setProducts(prod)
 
     }
@@ -42,21 +41,22 @@ export const ItemDetailContainer = () => {
         setLoading(true)
         const fetchData = async () => {
             try {
-                const collectionRef = collection(firestore, 'productos');
-                const snapshot = await getDocs(collectionRef)
+                const docRef = doc(firestore, "productos", params.id);
+                const docSnap = await getDoc(docRef);
 
-                const fetchedData = snapshot.docs.map(doc => ({
-                    id: doc.id,
-                    ...doc.data()
-                }));
-                const findData = fetchedData.find(item => item.id === params.id)
-                setShopData(findData)
-                setLoading(false)
+                if (docSnap.exists()) {
+                    setShopData(docSnap.data())
+                    setLoading(false)
+                } else {
+                    // docSnap.data() will be undefined in this case
+                    console.log("No such document!");
+                }
+
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
         }
-            fetchData()
+        fetchData()
     }, [])
     return (
         <>
