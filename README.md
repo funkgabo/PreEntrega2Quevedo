@@ -8,6 +8,6 @@ El proyecto corresponde a desarrollo Frontend.
 
 Las credenciales de Firebase se han omitido por motivos de seguridad.
 
-
+[![Captura-Ecommerce.png](https://i.postimg.cc/y8Vz1Q8j/Captura-Ecommerce.png)](https://postimg.cc/zVPQpkWH)
 
 
