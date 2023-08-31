@@ -1,8 +1,13 @@
-# React + Vite
+# React + Vite | Proyecto Final Curso de ReactJS CoderHouse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto corresponde a la culminación del curso de ReactJS de la escuela online CoderHouse.
 
-Currently, two official plugins are available:
+## Ecommerce
+Se realiza la emulación de un Ecommerce con conexión a Firebase.
+El proyecto corresponde a desarrollo Frontend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Las credenciales de Firebase se han omitido por motivos de seguridad.
+
+
+
+

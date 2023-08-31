@@ -9,6 +9,7 @@ import Skeleton from "react-loading-skeleton"
 import { CartContext } from "../../context/cartContext"
 import { collection, doc, getDoc } from "firebase/firestore"
 import { firestore } from "../../firebase/app"
+import { Link } from "react-router-dom"
 
 export const ItemDetailContainer = () => {
     const updateCart = useContext(CartContext)
@@ -32,9 +33,6 @@ export const ItemDetailContainer = () => {
             subProds.pop()
             setProducts(subProds)
         }
-    }
-    const pushToCart = () => {
-        console.log(updateCart.cartProducts)
     }
 
     useEffect(() => {
@@ -80,13 +78,13 @@ export const ItemDetailContainer = () => {
                             <Button variant="secondary" onClick={subCartHandler}>-</Button>{' '}
                             <div className='NumberFormContainer'>
                                 <Form.Label htmlFor="inputProducts">Quantity</Form.Label>
-                                <Form.Control placeholder="0"
+                                <Form.Control
                                     type="number" min={1} value={quantity} onChange={() => { }}
                                     id="inputProducts"
                                 />
                             </div>{' '}
                             <Button variant="secondary" onClick={addingCartHandler}>+</Button>{' '}
-                            <Button variant="success" onClick={pushToCart}>Go to Cart</Button>
+                            <Link to={'/Cart'}><Button variant="success">Go to Cart</Button></Link>
                         </Card.Body>
                         <Card.Footer className="text-muted">3 Stock</Card.Footer>
                     </Card>

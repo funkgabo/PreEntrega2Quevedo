@@ -6,30 +6,12 @@ import './Cart.css'
 import { Alert } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { FaArrowCircleUp, FaArrowCircleDown } from "react-icons/fa"
+import { useUniqueObjectsWithQuantity } from '../../hooks/useUniqueObjectsWithQuantity'
 
 export const Cart = () => {
     const cartInfo = useContext(CartContext)
-    function removeDuplicatesAndCount(inputArray) {
-        const countMap = {};
 
-        inputArray.forEach(obj => {
-            const key = JSON.stringify(obj);
-            countMap[key] = (countMap[key] || 0) + 1;
-        });
-
-        const resultArray = [];
-        for (const key in countMap) {
-            if (countMap.hasOwnProperty(key)) {
-                const obj = JSON.parse(key);
-                obj.units = countMap[key];
-                resultArray.push(obj);
-            }
-        }
-        return resultArray;
-    }
-
-    const cartProducts = removeDuplicatesAndCount(cartInfo.cartProducts)
-    const totalPrice = cartProducts.map(prod => prod.price * prod.units).reduce((a, b) => a + b, 0)
+    const [cartProducts, totalPrice] = useUniqueObjectsWithQuantity(cartInfo.cartProducts)
     return (
         <Card className="text-center">
             <Card.Header>Cart</Card.Header>
@@ -53,7 +35,7 @@ export const Cart = () => {
                 </Alert>}
             <Card.Footer className="text-muted">TOTAL ${totalPrice}
             </Card.Footer>
-            {cartProducts.length ? <Card.Footer className="text-muted"><Link to='/' style={{ color: 'white', textDecoration: 'none' }}><Button variant="success">Continuing Shopping</Button>{' '}<Button variant="primary">Checkout</Button></Link>
+            {cartProducts.length ? <Card.Footer className="text-muted"><Button variant="success" onClick={cartInfo.clearCart}>Clear Cart</Button>{' '}<Link to='/Checkout'><Button style={{ width: '100%', marginTop: '5px' }} variant="primary">Checkout</Button></Link>
             </Card.Footer>
                 : <Card.Footer className="text-muted"><Link to='/' style={{ color: 'white', textDecoration: 'none' }}><Button variant="success">Go to Shop</Button></Link>
                 </Card.Footer>}

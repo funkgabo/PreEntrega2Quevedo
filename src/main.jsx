@@ -9,6 +9,7 @@ import { Category } from './pages/Category'
 import { ItemDetailContainer } from './pages/ItemDetailContainer/index.jsx'
 import { CartProvider } from './context/cartContext.jsx'
 import { Cart } from './pages/Cart/index.jsx'
+import { Checkout } from './pages/Checkout/index.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route exact path='/Category/:id' element={<Category />} />
             <Route exact path='/Item/:id' element={<ItemDetailContainer />} />
             <Route exact path='/Cart/' element={<Cart />} />
+            <Route exact path='/Checkout/' element={<Checkout />} />
           </Routes>
         </BrowserRouter>
       </SkeletonTheme>
