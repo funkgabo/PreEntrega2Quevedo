@@ -7,12 +7,14 @@ import { Alert } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { FaArrowCircleUp, FaArrowCircleDown } from "react-icons/fa"
 import { useUniqueObjectsWithQuantity } from '../../hooks/useUniqueObjectsWithQuantity'
+import { Layout } from '../../components/Layout'
 
 export const Cart = () => {
     const cartInfo = useContext(CartContext)
 
     const [cartProducts, totalPrice] = useUniqueObjectsWithQuantity(cartInfo.cartProducts)
     return (
+        <Layout>
         <Card className="text-center">
             <Card.Header>Cart</Card.Header>
             {cartProducts.length ? cartProducts.map(prod => (
@@ -30,6 +32,7 @@ export const Cart = () => {
                     </Card.Text>
                 </Card.Body>
             ))
+            
                 : <Alert variant='danger'>
                     You have no Products in the Cart
                 </Alert>}
@@ -41,5 +44,6 @@ export const Cart = () => {
                 </Card.Footer>}
 
         </Card>
+        </Layout>
     );
 }
